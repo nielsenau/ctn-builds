@@ -17,11 +17,31 @@ You will find this is far easier than the opposite task of using CSS to cram you
     box-sizing: border-box;
 }
 /** APPLY BASE TAG STYLES */
+
+body {
+    background-color: #151515;
+    color: #E6EAEC;
+}
 body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color:#54ECC4;
+    text-decoration: none;
+    font-weight:bold;
+
+}
+
+a:visited {
+    color:#BDBDBD;
+}
+
+a:hover {
+    color:#ACA7CB;
 }
 /** RESPONSIVE IMAGES */
 figure,
@@ -32,56 +52,8 @@ img {
     margin : 0 auto;
 }
 
-/** Navigation **/
-
-.nav {
-    background-color: #FFF;
-    width:100%;
-}
-
-.nav a {
-    font-weight: 100;
-    text-transform: capitalize;
-    opacity: 0.4;
-    color: black;
-    padding-left: 10px;
-}
-
-.nav .active {
-    font-weight: bold;
-    opacity: 0.7;
-
-}
-
-.nav a:active {
-    font-weight: bolder;
-}
-
-.nav a:hover {
-    font-weight: bold;
-    color: orangered;
-    opacity: 1;
-}
-
-
-
-/** Header Styles **/
-
-h2, h3 {
-font-weight: normal;
-}
-
-h2 {
-    font-size:17px;
-}
-
 p {
     line-height: 1.2em;
-}
-
-a {
-    text-decoration: none;
-
 }
 /** Caption styles */
 .caption,
@@ -108,7 +80,6 @@ figcaption {
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
-    font-style: italic;
 }
 
 .desktop {
@@ -161,16 +132,6 @@ figcaption {
     .mobile {
         display: none;
     }
-
-    .collage {
-        display: flex;
-        justify-content: space-between;
-      }
-    
-      .collage > div {
-        flex-basis: 30%;
-      }
-    
 }
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE

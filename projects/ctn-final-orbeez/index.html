@@ -1,3 +1,14 @@
+<!-- final assignment 
+tools used: 
+flexbox - for image collage 
+filter - to swap between gun components and box peek diagram annotated images 
+annotated image - exploring the components of a gel bead gun and what was included in the box 
+xx experimented with different size tooltip annotations for the gun component diagram 
+xxxx can't decide if cooler or uglier 
+
+all photos and screencaptures were taken by me save for the NYPD notices supplied by DCPI/NYPD News 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- first step to a responsive site -->
-    <title>HTML Skeleton</title>
+    <title>What's up with the Orbeez guns police are banning across the country?</title>
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -25,10 +36,224 @@
 </head>
 
 <body>
-    <!-- YOUR CONTENT GOES HERE -->
-    
 
-    <!-- Your javascript should be called here -->
+    <!--top navigation-->
+
+	<menu>
+
+		<div class="nav">
+
+			<a href="/ctn-builds"><i class="fa fa-caret-left" aria-hidden="true"></i>Back</a>
+			<a href="https://github.com/nielsenau/ctn-builds">Git Repo</a>
+
+		</div>
+	</menu>
+
+	<!--article headline and attribution-->
+	<div class="container">
+		<h1>What's up with the "Orbeez" guns police are banning across the country?</h1>
+		<h2>By <a href="https://audreynielsen.press">Audrey Nielsen</a></h2>
+		<h3>After a teenager was killed in the Bronx while shooting neighbors with a toy 'water bead' gun, the NYPD joined departments across the country by announcing the toys are banned under existing airsoft gun laws.
+        </h3>
+	</div>
+
+	<div class="container image">
+		<figure>
+			<img src="img/warninginside.png">
+			<figcaption>
+ On the first page of the SPLATRBALL's operation manual, one warning warns users not to "brandish or display" the gun in public since police might mistake it for a firearm. 
+			</figcaption>
+		</figure>
+	</div>
+
+
+<!-- article body -->
+
+<div class="container">
+    <p>This summer, a new toy craze has met with tragedy and legal challenges across the city and the country.&nbsp;</p>
+    <p>In Concourse, a man allegedly harassed a Bronx cop in late July by pointing an &lsquo;Orbeez&rsquo; gun, loaded with water-filled gel balls, at an officer and shouting at him. He was arrested for attempted assault on July 23rd, just one day after the tragic killing of a teenager in Mount Hope, 18-year-old Raymound Chaluisant.&nbsp;</p>
+    <p>Chaluisant was fatally shot by an off-duty corrections officer when the officer &lsquo;returned fire&rsquo; with a real gun after Chaluisant hit him with a water bead in the back. New York police immediately began to post about the kind of toy weapon that had been found near Chaluisant&rsquo;s body, calling them out as unsafe and threatening confiscation and summons&rsquo; for anyone who used one.&nbsp;</p>
+    <p>One gel blaster brand has garnered some unsolicited attention: the SPLATRBALL blaster was used as an example of illegal gel blasters in NYPD posts about them following Chaluisant&rsquo;s death. The police have emphasized the danger of the toy weapons, but what are they really?</p>
+    
+<!-- diagram filter
+    gun components 'anatomy of a ... etc' diagram visible by default -->
+
+<h2><strong>So what is a water bead gun or gel blaster?</strong></h2>
+    <div>
+        Take a look... <select class="filter">
+          <option value="gun">at the gun components</option>
+          <option value="boxtour">inside the box</option>
+
+        </select> of one brand of gel blaster: <strong>the SPLATRBALL</strong>
+      </div>
+    </div>
+<br>
+ <!-- annotated image 1: gun components -->
+
+ <section id="diagrams">
+ <div class="container image item gun active">
+    <div class="annotate">
+        <img src="img/splatrball-annotated.jpg" />
+    
+        
+        <div id="mag" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <img style="width:30%;float:left;" src="img/sinkfill.gif">
+            <h3 class="info">Magazine</h3>
+
+        <p>Unlike the spring-powered mechanical magazines used in other imitation guns, toy gel bead blasters like the SPLATRBALL have a small electronic magazine that feeds the beads up into the gun's mechanisms to fire.</p>
+
+        <p>The 'orbeez' style 'ammo' for the SPLATRBALL starts out tiny and expands over 4 hours in water. When fired, the water beads explode on impact, causing minimal damage.</p>
+        </div>
+      </div>
+      <div id="battery" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <img style="width:40%;float:left;" src="img/battery.png">
+            <h3 class="info">Battery</h3>
+
+        <p>The SPLATRBALL has a small removable 7.4 volt 1800mah battery that connects under the muzzle and can be recharged via USB. </p>
+        <p>The battery is lower voltage than the typical "stick" batteries used in airsoft guns.</p>
+          </div>
+      </div>
+      <div id="rate" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3 class="info">Gearbox mechanism</h3>
+
+            <img style="width:60%;float:left;" src="img/gearbox-cred-engineerable.png">
+        <p>The SPLATRBALL has a spring piston gearbox mechanism similar to the gearboxes used in airsoft guns, but with larger clearances for the 'Orbeez' style water bead ammo and plastic nylon gears and components.</p>
+        <p>SPLATRBALL advertises a muzzle velocity of 200 feet per second. A knob selector allows you to switch between auto and semi-auto firing.</p>
+        <figcaption style="color:#fff;">ABOVE: V2 Gearbox mechanism visualization</figcaption>
+
+          </div>
+      </div>
+   
+      <figcaption>Click on areas in the image above that you want to see closer or learn more about.</figcaption>
+
+    </div>
+
+</div>
+
+
+ <!-- annotated image 2: in the box -->
+
+
+
+ <div class="container image item boxtour">
+    <div class="annotate">
+        <img src="img/openbox-00-00-04-460.png" />
+    
+        
+        <div id="glasses" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3 class="info">Safety Glasses</h3>
+            <img style="width:30%;float:left;" src="img/glasses.png">
+
+        <p>The SPLATRBALL comes with a pair of small plastic safety glasses. </p>
+        </div>
+      </div>
+      <div id="ammo" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <img style="width:40%;float:left;" src="img/pouringbeads.gif">
+            
+
+        <p style="margin:10%;margin-top:15%;"><h3 class="info">Dehydrated 'Ammo'</h3><br>The blaster comes with ten "ammo" packs of 500 dehydrated water beads. The magazine holds up to 400 at a time, and the gun fires up to 8 'splatrballs' per second on full auto.</p>
+
+        <p style="margin-left:10%;">The beads grow in size by over 10x turning into squishy gel balls.</p>
+          </div>
+      </div>
+      <div id="muzzle" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3 class="info">Bright colors and imitation guns</h3>
+
+        <p>The SPLATRBALL and similar water bead blasters are brightly colored, complying with laws across the country for imitation and toy guns that requires toy guns look different from real firearms -- but some children and hobbyists have started modifying their toys to look like the guns they're visually based off of.</p>
+        <p>SPLATRBALL explicitly warns users not to modify their guns to look more realistic, but examples of guns painted black or modified with accessories have been shared across social media.</p>
+          </div>
+      </div>
+      <div id="stock" class="box orange">
+          <a class="close fa fa-times" href="#"></a>
+          <div class="inner">
+            <h3 class="info">Stock and scope</h3>
+            <img style="width:30%;float:left;" src="img/stock.png">
+            <p>The blaster comes with colorful accessories in the style of airsoft and paintball guns, including a removable stock and a faux-scope.</p>
+          </div>
+      </div>
+      <figcaption>Click on areas in the image above that you want to see closer or learn more about.</figcaption>
+
+    </div>
+</div>
+</section>
+
+<div class="container">
+
+    <p>In New York City, the ban on toy guns like these comes from <a href="https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-6218">&sect; 10-131(b)</a> in the New York City Administrative Code&rsquo;s regulations on firearms. Air pistols, air rifles or any similar device &ldquo;in which the propelling force is a spring or air&rdquo; are illegal to sell or possess in the city without a license from the commissioner of the New York Police Department.&nbsp;</p>
+    <p>City code allows for the possibility of a licensing process &mdash; and sets an annual fee for licensing &mdash; but there&rsquo;s no public ap plication or formal licensing process in the city for this kind of toy gun.</p>
+    
+    
+</div>
+
+<br>
+     <!-- collage
+    chose to make one row of small images that wraps if window shrinks -->
+
+     <div class="container image">
+        <div class="collage">
+            <div class="img">
+                <img src="img/op manual.JPG" alt="The operation manual for the SPLATRBALL Blaster Rifle" />
+            </div>
+            <div class="img">
+                <img src="img/boxbackwarnings.jpeg" alt="The warnings and advertisements on the back of the SPLATRBALL box" />
+            </div>
+            <div class="img">
+                <img src="img/nypdnotice.jpeg" alt="A NYPD notice announcing that gel/water bead blasters fall under NYC Admin code 10-131(b)(1) and are illegal in NYC" />
+            </div>
+            <div class="img">
+                <img src="img/seizure-gelblasters-nypd.png" alt="A tweet from NYPDNews from July 22, 2022 that reads 'Yesterday, officers encountered inviduals carrying these bead blasters. They were confiscated and summonses were issued." />
+            </div>
+        </div>
+        <p class="caption">From left: the operation manual for the SPLATRBALL water bead blaster, the warnings on the back of the blaster box, an NYPD distributed notice about NYC law banning air pistols including gel blasters, and an NYPD News post announcing the confiscation of bead blasters from July, 2022, courtesy of NYPD/DCPI.</p>
+    </div>
+
+<!-- end annotated image / start article body again-->
+<div class="container">
+
+    <p>Automatic electric gun (AEG) style water bead blasters like the SPLATRBALL have lower-caliber versions of the kind of gearboxes used in normal electric airsoft guns, just using nylon gears and modified electric magazine feed and barrel sizing adjustments to accommodate their squishy ammo. Like AEG airsoft guns, they have an internal motor inside a gearbox that loads an air pump piston against a spring. When the spring releases, the piston plunger is pushed forward through a cylinder and the water bead pushed up through the magazine is shot through the barrel.&nbsp;</p>
+    <p>So, for all that blasters like these are toys with relatively harmless ammo and are unlikely to cause serious injury used as-instructed, they definitely do fall under the administrative code&rsquo;s definition banning guns where &ldquo;the propelling force is a spring or air.&rdquo;&nbsp; So &mdash; why do kids in New York City have them, if they&rsquo;re illegal to buy, sell, or own?</p>
+</div>
+<!-- amazon scroll -->
+<div class="container image">
+    <figure>
+        <img src="img/amazon-best-sellers-top50.gif" alt="scrolling animated screencapture of the 'amazon best sellers' page for the Toy Foam Blasters category">
+        <figcaption>
+            Four of the top ten best sellers on amazon for the category 'toy foam blasters' are water bead guns — the guns make up 17 of amazon's top 50 best sellers in the category. 
+        </figcaption>
+    </figure>
+</div>
+
+
+<div class="container">
+    <p>On Amazon and other online stores, water bead blasters like the SPLATRBALL, Omoqia Toy&rsquo;s MP-9 Gel Ball Blaster, or the Gel Blaster SURGE are exploding in popularity, and they&rsquo;re surprisingly easy to get a hold of.&nbsp;</p>
+
+
+    <figure><img style="float:right;width:25%;padding:5px;border:1px solid rgba(97, 97, 97, 0.30);border-radius:10px;margin-left:10px;" src="img/restrictedshipping-amazon.png" alt="A screenshot of a geographically restricted Amazon cart checkout for an airsoft gun"></figure>
+
+</div>
+
+<div class="container">
+
+    <p>For some reason, despite not firing any kind of foam projectile, most of these water bead blasters are listed &mdash; and ranked &mdash; in Amazon&rsquo;s Toy Foam Blasters category under Toys and Games, like a NERF foam dart gun. Gel blasters aren&rsquo;t foam dart guns, but they&rsquo;re outranking many of those toys in their own category. Four gel blasters cracked the top ten best selling &ldquo;toy foam blasters&rdquo; on Amazon in August. Seventeen total made the site&rsquo;s top 50, most with hundreds or thousands of reviews.</p>
+    <p>Amazon knows that air and spring powered guns are banned for sale, shipping, and possession in New York City &mdash; or at least, the company is aware of enough city regulations restricting their sale that they will not ship guns in the airsoft category within New York. If you try, they serve you a red-text error message warning you that the item you&rsquo;ve picked can&rsquo;t be shipped to your location. But try to order most of the banned gel blasters on the site into the city, categorized as they are in the toys sections, and Amazon promises next-day delivery.&nbsp;</p>
+    <p>Within Amazon&rsquo;s seller guidelines on restricted products, the company explicitly notes that airsoft guns, toy guns and guns marketed as air or spring driven are subject to geographic sales restrictions, but many of the gel blasters listed on the site are completely unrestricted, flying under the radar despite their recent popularity.&nbsp;</p>
+    <p>Promoted significantly within Amazon&rsquo;s New Releases, Best Sellers, and recommendations features and with no warnings on product pages that these colorful toys qualify as airsoft guns and are illegal in certain jurisdictions, families may buy them as gifts or new toys completely ignorant to where they fall within NYC code &ndash; and Amazon fulfills those orders, leaving those families unknowingly violating the law and putting their children at risk.&nbsp;</p>
+
+</div>
+      <!--  javascript -->
+      <script src="main.js"></script>
 </body>
 
 </html>

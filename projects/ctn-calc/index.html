@@ -2,33 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <!-- set the character set -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- first step to a responsive site -->
-    <title>HTML Skeleton</title>
+	<meta charset="utf-8">
+	<!-- set the character set -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- first step to a responsive site -->
+	<title>How much would you earn as an inmate worker in tristate prisons?</title>
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <!-- Your styles should be called here -->
-    <link rel="stylesheet" href="style.css" />
+	<!-- FONT AWESOME (updated with my kit code) -->
+	<script src="https://kit.fontawesome.com/184fd241b5.js" crossorigin="anonymous"></script>
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+	<!-- Your styles should be called here -->
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
       	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       	<![endif]-->
 </head>
 
 <body>
-    <!-- YOUR CONTENT GOES HERE -->
-    
+	<!--top navigation-->
 
-    <!-- Your javascript should be called here -->
+	<menu>
+
+		<div class="nav">
+
+			<a href="/ctn-builds"><i class="fa fa-caret-left" aria-hidden="true"></i>Back</a>
+			<a href="https://github.com/nielsenau/ctn-builds">Git Repo</a>
+
+		</div>
+	</menu>
+
+	<!--article headline and attribution-->
+
+	<div class='container'>
+		<h1>ACLU Calls Incarcerated Workers "Captive Labor"</h1>
+		<p class='byline'>By Audrey Nielsen</p>
+	</div>
+	<figure>
+		<div class='container image'>
+			<img src='img/800px-US_Prison_labor.jpg' />
+		</div>
+		<figcaption>Incarcerated workers at a federal prison industries/UNICOR facility producing military uniforms.</figcaption>
+	</figure>
+
+	<!-- article body - published sans data visualization at the Crime Report -->
+	<div class='container'>
+		<p>Most incarcerated workers&mdash;more than 76 percent of those surveyed by the Bureau of Justice Statistics&mdash;are required to work or will face repercussions from their prison ranging from losing privileges to punishments like solitary confinement.</p>
+		<p>Despite that requirement, the vast majority of prisoners cannot afford basic necessities like soap or other hygiene products or medical care with wages earned from prison labor, according to a&nbsp;<a href="https://www.aclu.org/news/human-rights/captive-labor-exploitation-of-incarcerated-workers">new report</a>&nbsp;on incarcerated workers.</p>
+		<p><a href="https://www.aclu.org/news/human-rights/captive-labor-exploitation-of-incarcerated-workers"><strong>Captive Labor: Exploitation of Incarcerated Workers</strong></a>, a new report issued on June 15 by the American Civil Liberties Union (ACLU), says families with an incarcerated loved one spend $2.9 billion a year to financially support their family members in prison.</p>
+		<p>The report notes that many prisons charge for everything from phone calls to soap or basic medical care. Incarcerated workers may make nothing at all, and those states with set minimum wages range from one to five cents per hour with workers making on average between 13 and 52 cents, with the majority of even that small wage going to government fees paid back to the prison or court.</p>
+	</div>
+
+	<!-- calculator -->
+	<div class='calc-container'>
+		<div class="container">
+			<h2>How much would you earn as an inmate worker in tri-state prisons?</h2>
+			<p>Enter a number and this calculator will tell you the lowest and highest you can make per hour in Connecticut, New Jersey, and New York as an incaracerated worker. </p>
+			<p>Inmates can work either non-industry jobs within prison (like laundry, cafeteria or other inmate services) or a correctional industries job (like making products, doing construction work or working with external companies). Industry jobs typically pay slightly more per hour, but are extremely limited.</p>
+			<div class="calculator">
+				<div class="row">
+					<div class='industry'>
+						<h3>Non-industry jobs</h3>
+						<div class="hours_container">
+							<div>
+								<input type="number" name='hours' value="0" />
+							</div>
+							<div class="unit">
+								hours
+							</div>
+						</div>
+					</div>
+					<p><span class="ct" data-price="0.12"> In <strong>Connecticut</strong>, you would make between <span class="earnings"></span> and </span><span class="ct_high" data-price="0.90"><span class="earnings"></span>.</span>
+					</p>
+					<p><span class="ny" data-price="0.10"> In <strong>New York</strong>, you would make between <span style="color:red;font-weight:bold;" class="earnings"></span> and </span><span class="ny_high" data-price="0.33"><span class="earnings"></span>.</span>
+					</p>
+					<p><span class="nj" data-price="0.20"> In <strong>New Jersey</strong>, you would make between <span class="earnings"></span> and </span><span class="nj_high" data-price="0.25"><span class="earnings" style="color:red;font-weight:bold;"></span>.</span>
+					</p>
+				</div>
+				<div class="row">
+					<div class='item'>
+						<h3>State-owned correctional industry jobs</h3>
+						<div class="hours_container">
+							<div>
+								<input type="number" name='hours' value="0" />
+							</div>
+							<div class="unit">
+								hours
+							</div>
+						</div>
+					</div>
+					<p><span class="ct" data-price="0.30"> In <strong>Connecticut</strong>, you would make between <span class="earnings"></span> and </span><span class="ct_high" data-price="1.50"><span class="earnings"></span>.</span>
+					</p>
+					<p><span class="ny" data-price="0.16"> In <strong>New York</strong>, you would make between <span style="color:red;font-weight:bold;" class="earnings"></span> and </span><span class="ny_high" data-price="0.65"><span class="earnings"></span>.</span>
+					</p>
+					<p><span class="nj" data-price="0.38"> In <strong>New Jersey</strong>, you would make between <span class="earnings"></span> and </span><span class="nj_high" data-price="2.00"><span class="earnings" style="color:red;font-weight:bold;"></span>.</span>
+					</p>
+				</div>
+			</div>
+
+			<figcaption>Data Source: ACLU and University of Chicago Law School Global Human Rights Clinic analysis of public pay scale/wage policy documents across American states, updated in <a href="https://www.aclu.org/report/captive-labor-exploitation-incarcerated-workers">'Captive labor: exploitation of incarcerated workers'</a> 2022.</figcaption>
+
+		</div>
+	</div>
+
+	<!-- article kicker -->
+	<div class='container'>
+		<p>Most prison work isn&rsquo;t skill building or marketable to new employers after release, either. Access to vocational training programs is limited &mdash; only a fifth of incarcerated people participate in vocational programs, and the rest, around 700,000 inmates are left will lower-paid work with non-transferrable skills. UNICOR, a program from Federal Prison Industries that offers higher wages and boasts about assisting offenders in &ldquo;learning the skills necessary to successfully transition from convicted criminals to a law-abiding, contributing members of society,&rdquo; has a waitlist of 25,000 people.&nbsp;</p>
+		<p>Waitlists for vocational programming in states across the country can climb into the thousands, with need far outpacing inmate numbers.</p>
+		<p>At the same time, prisons are benefiting hand over fist from incarcerated labor: the ACLU placed that value production at more than $2 billion in goods and $9 billion in prison maintenance services.</p>
+		<p>&ldquo;We are saving [the prisons] millions of dollars and getting paid pennies in return,&rdquo; inmate Latashia Millender told the report&rsquo;s authors.</p>
+	</div>
+
+	<!-- javascript -->
+	<script src="main.js"></script>
 </body>
 
 </html>

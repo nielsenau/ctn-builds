@@ -5,138 +5,281 @@ Most of your styles get written like standard CSS, but for your mobile presentat
 Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
+
 /*********************************************************************
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
+
 /** SET BORDER BOX EVERYWHERE */
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 /** APPLY BASE TAG STYLES */
+
 body,
 html {
-    /* Sets default font-size to 16px, ensuring 1em = 16px; */
-    font-size: 16px;
+  /* Sets default font-size to 16px, ensuring 1em = 16px; */
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
+
 /** RESPONSIVE IMAGES */
+
 figure,
 img {
-    /* Sets image width to match parent */
-    width  : 100%;
-    display: block;
-    margin : 0 auto;
+  /* Sets image width to match parent */
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 p {
-    line-height: 1.2em;
+  line-height: 1.5em;
 }
+
+header {
+  margin-bottom: 16px;
+}
+
+header p {
+  margin: 0;
+}
+
 /** Caption styles */
+
 .caption,
 figcaption {
-    font-size: 0.9rem;
-    color    : #8e8a8a;
-    padding  : 5px 0;
+  font-size: 0.9rem;
+  color: #8e8a8a;
+  padding: 5px 0;
 }
+
 /** BASE CLASSES */
+
 /** Container styles to keep content from becoming too wide or coming too close to
 * mobile edge */
+
 .container {
-    width    : 100%;
-    max-width: 800px;
-    padding  : 10px;
-    margin   : 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
 }
+
 /** Images are allowed to be a little wider when broken out into their own container */
+
 .container.image {
-    max-width: 1200px;
-    padding  : 0;
+  max-width: 1200px;
+  padding: 0;
 }
 
 .container.image .caption,
 .container.image figcaption {
-    padding: 5px 10px;
+  padding: 5px 10px;
 }
 
-.desktop {
-    display: none;
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.mobile {
-    display: block;
-}
-/** Screens are the size of at least one device screen */
-.screen {
-    width     : 100%;
-    min-height: 100vh;
-}
-/** for vertical centering */
-.screen.padd {
-    padding-top: 25%;
-}
-/** video setup */
-.video {
-    position      : relative;
-    width         : 100%;
-    height        : 0;
-    padding-bottom: calc(9 / 16 * 100%);
+/** grab img class elements that are descendants of 'collage' class elements */
+.collage > .img {
+  flex-basis: calc(50% - 2.5px);
 }
 
-.video.vertical {
-    padding-bottom: calc(16 / 9 * 100%);
+/** grab first two img class elements  */
+.collage > .img:nth-child(1), /*comma is or operator */ 
+.collage > .img:nth-child(2) {
+  margin-bottom: 5px;
 }
 
-.video iframe,
-.video video {
-    position: absolute;
-    width   : 100%;
-    height  : 100%;
-    top     : 0;
-    left    : 0;
-    border  : 0;
+
+/** Navigation **/
+
+.nav {
+    background-color: #FFF;
+    width:100%;
 }
+
+.nav a {
+    font-weight: 100;
+    text-transform: capitalize;
+    opacity: 0.4;
+    color: black;
+    padding-left: 10px;
+}
+
+.nav .active {
+    font-weight: bold;
+    opacity: 0.7;
+
+}
+
+.nav a:active {
+    font-weight: bolder;
+}
+
+.nav a:hover {
+    font-weight: bold;
+    color: orangered;
+    opacity: 1;
+}
+
+
+/** Header Styles **/
+
+h2, h3 {
+    font-weight: normal;
+    }
+    
+    h2 {
+        font-size:17px;
+    }
+    
+    p {
+        line-height: 1.2em;
+    }
+    
+    a {
+        text-decoration: none;
+    
+    }
+
+
+/* annotated image styles */ 
+
+.annotate {
+  position:relative;
+}
+
+.dot {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  color: #FFF;
+}
+
+.dot .inner {
+  position: absolute;
+  opacity: 0;
+  color: #FFF;
+  padding: 25px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.close {
+  color: #FFF;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.25em;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.dot.active {
+  width:50%;
+  height:50%;
+  top: 20%; left: 25%;
+  border-radius:0;
+  border: 0;
+  z-index:2; 
+}
+
+.dot.active .inner,
+.dot.active .close {
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* dot coloring */
+
+.dot.red {
+  background-color: rgba(255, 31, 31, 0.916);
+}
+
+/* annotation placement */ 
+
+#y2016:not(.active) {
+  bottom: 39%;
+  left: 14.5%;
+}
+
+#y2017:not(.active) {
+  bottom: 36%;
+  left: 28.5%;
+}
+
+#y2019:not(.active) {
+  bottom: 52.5%;
+  left: 57.25%;
+}
+
+#y2020:not(.active) {
+  bottom: 55%;
+  left: 71.5%;
+}
+
+#y2021:not(.active) {
+  bottom: 48%;
+  left: 85.7%;
+}
+
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
-@media(min-width: 681px) {
-    /* Any adjustments for tablets and larger go here.
-    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-    .desktop {
-        display: block;
-    }
 
-    .mobile {
-        display: none;
-    }
+@media (min-width: 681px) {
+  /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
 }
+
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
-@media(min-width: 769px) {
-    /* Any adjustments for desktop and larger go here.
+
+@media (min-width: 769px) {
+  /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
 }
+
 /*********************************************************************
   YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
-@media(min-width: 805px) {
-    /* Any adjustments for desktop and larger go here.
+
+@media (min-width: 805px) {
+  /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
-    .container {
-        padding: 0;
-    }
+  .container {
+    padding: 0;
+  }
 }
+
 /*********************************************************************
   YOUR LARGE DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
-@media(min-width: 1205px) {
-    /* Any adjustments for desktop and larger go here.
+
+@media (min-width: 1205px) {
+  /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
-    .container.image .caption,
-    .container.image figcaption {
-        padding: 5px 0;
-    }
+  .container.image .caption,
+  .container.image figcaption {
+    padding: 5px 0;
+  }
 }

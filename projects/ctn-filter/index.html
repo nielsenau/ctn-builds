@@ -1,34 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <!-- set the character set -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- first step to a responsive site -->
-    <title>HTML Skeleton</title>
+<!-- filter project 
+note: a version of this article written by me appeared (sans data visualization) in the Crime Report on June 23
+ -->
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <!-- Your styles should be called here -->
-    <link rel="stylesheet" href="style.css" />
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      	<![endif]-->
-</head>
-
-<body>
-    <!-- YOUR CONTENT GOES HERE -->
-    
-
-    <!-- Your javascript should be called here -->
-</body>
-
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8">
+     <!-- set the character set -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- first step to a responsive site -->
+     <title>The Graying of America’s Prison Population</title>
+ 
+     <!-- FONT AWESOME (updated with my kit code) -->
+     <script src="https://kit.fontawesome.com/184fd241b5.js" crossorigin="anonymous"></script>
+ 
+ 
+     <!-- Your styles should be called here -->
+     <link rel="stylesheet" href="style.css" />
+ 
+ 
+     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!--[if lt IE 9]>
+           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+         <![endif]-->
+ </head>
+ 
+ <body>
+ <!--top navigation--> 
+ 
+ <menu>
+ 
+     <div class="nav">
+     
+       <a href="/ctn-builds"><i class="fa fa-caret-left" aria-hidden="true"></i>Back</a>
+       <a href="https://github.com/nielsenau/ctn-builds">Git Repo</a>
+     
+     </div>
+ </menu>
+ 
+ <body>
+   <div class="container">
+     <h1>The Graying of America’s Prison Population</h1>
+     <p><i>Although scores of elderly federal inmates have been released on compassionate grounds during COVID-19, 80% of requests have been denied.</i></p>
+ <figure>
+     <img src="img/elderly-illustration.png">
+   <figcaption>Illustration by Jonathan Hutarte/Bloomberg Law</figcaption>
+     </figure>
+     <h5>By Audrey Nielsen</h5>
+ 
+     
+ <p>Despite a decline in prison populations over the last 15 years, the number of people serving sentences of life without parole (LWOP) has continued to grow</p>
+ <p>According to a&nbsp;<a href="https://www.sentencingproject.org/wp-content/uploads/2022/06/Nothing-But-Time-Elderly-Americans-Serving-Life-Without-Parole.pdf">report released Thursday</a>&nbsp;by The Sentencing Project, the worst is yet to come, as a large swath of people serving life without parole are growing into their elderly years.</p>
+ <p>&ldquo;Older incarcerated people describe sentences of life without the possibility of parole&mdash;with the expectation that they will die in prison&mdash;as particularly cruel, involving a devastating loss of human dignity,&rdquo; wrote Ashley Nellis, Ph.D., Senior Research Analyst at The Sentencing Project, and author of the report.</p>
+ <p>&ldquo;Considering the consistent observation across dozens of studies that people &lsquo;age out&rsquo; of criminal conduct, the dedication of resources toward a group that is of extremely low risk is a foolish investment.&rdquo;</p>
+ <p>Keeping elderly offenders in prison until their deaths is expensive, too: the report found that Pennsylvania pays at least $122 million per year in care for people over 50 serving life without parole in the state&rsquo;s prisons.</p>
+ <p>In Georgia, medical costs for the elderly population in Georgia corrections facilities was nearly nine times the cost of care for nonelderly people in the system.</p>
+ <p>Life sentences have been handed down in the American carceral system for most of its existence but, the Sentencing Project reports, recent trends both mandatory and preferential in life sentences with no chance for parole have made it increasingly common.</p>
+ <p>A previous report from the Sentencing Project in 2020,&nbsp;<a href="https://www.sentencingproject.org/publications/no-end-in-sight-americas-enduring-reliance-on-life-imprisonment/"><em>No End in Sight,</em></a>&nbsp;revealed a 66 percent increase in inmates serving life without parole since 2003.</p>
+ <h4><strong>LWOP Around the Country</strong></h4>
+ <p>The report studied 39,253 people serving life-without-parole sentences in 20 states, representative of three-quarters of the LWOP population across the country. Half of all incarcerated people serving LWOP are located in one of five states included in the review: California, Florida, Louisiana, Michigan, and Pennsylvania.</p>
+ <p>This study included only people serving LWOP, but researchers noted that people serving life &ldquo;with possibility of parole&rdquo; (LWP) or &ldquo;virtual life sentences&rdquo; of 50 years or longer, nearly 150,000 prisoners, are not guaranteed release.</p>
+ <p>Florida has the highest count of incarcerated people serving life without parole sentences. At 9,802, the state imprisons more than twice the people serving LWP than the second-highest population in Pennsylvania.</p>
+ 
+ <p>Report authors highlighted a recent Supreme Court decision in Canada. This month in a landmark decision in R v Bissonnette, the Canadian Supreme unanimously ruled life without parole sentences unconstitutional on the basis that sentences that extend beyond a person’s natural ability to outlive them are cruel and unusual punishments.</p>
+ 
+ <p>“A life sentence without a realistic possibility of parole presupposes the offender is beyond redemption and cannot be rehabilitated. This is degrading in nature and incompatible with human dignity,” Justices wrote.</p>
+     
+     <!-- FILTERED TABLE STARTS HERE 
+       data source: bureau of justice statitics, medical problems reported by prisoners: survey of prison inmates 2016 -->
+     <div class="tg-wrap">      
+       <h3>Federal Prison Inmates Diagnosed With Chronic Conditions by Age</h3>
+       <div>
+         <select class="filter">
+           <option value="/">Select Diagnosis...</option>
+           <option value="cancer">Cancer</option>
+           <option value="hypertension">Hypertension</option>
+           <option value="aglf">Arthritis, Gout, Lupus, or Fibromyalgia</option>
+         </select>
+       </div>
+       <table id="tg-LWOPchronic" class="tg">
+         <section id="diagnosis">
+       <thead>
+         <tr class="item cancer hypertension aglf">
+           <th class="tg-head">Age</th>
+           <th class="tg-head">Percentage</th>
+         </tr>
+       </thead>
+       <tbody>
+         <!-- row template - copy to add rows 
+           <tr class="item {diagnosis}"> 
+             <td class="tg-txt">{age range}</td>
+             <td class="tg-percent">{percent impacted}</td>
+           </tr>
+         -->
+         <tr class="item cancer">
+           <td class="tg-txt">18-24</td>
+           <td class="tg-percent">0.80%</td>
+         </tr>
+         <tr class="item cancer">
+           
+           <td class="tg-txt">25-34</td>
+           <td class="tg-percent">1.70%</td>
+         </tr>
+         <tr class="item cancer">
+           
+           <td class="tg-txt">35-44</td>
+           <td class="tg-percent">2.50%</td>
+         </tr>
+         <tr class="item cancer">
+           
+           <td class="tg-txt">45-54</td>
+           <td class="tg-percent">3.90%</td>
+         </tr>
+         <tr class="item cancer">
+           
+           <td class="tg-txt">55-64</td>
+           <td class="tg-percent">10.20%</td>
+         </tr>
+         <tr class="item cancer">
+           
+           <td class="tg-txt">65 or older</td>
+           <td class="tg-percent">19.10%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">18-24</td>
+           <td class="tg-percent">9.70%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">25-34</td>
+           <td class="tg-percent">16.50%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">35-44</td>
+           <td class="tg-percent">27.80%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">45-54</td>
+           <td class="tg-percent">41.50%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">55-64</td>
+           <td class="tg-percent">59.30%</td>
+         </tr>
+         <tr class="item hypertension">
+           
+           <td class="tg-txt">65 or older</td>
+           <td class="tg-percent">71.90%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">18-24</td>
+           <td class="tg-percent">4.10%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">25-34</td>
+           <td class="tg-percent">6.80%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">35-44</td>
+           <td class="tg-percent">15.80%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">45-54</td>
+           <td class="tg-percent">27.40%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">55-64</td>
+           <td class="tg-percent">42.80%</td>
+         </tr>
+         <tr class="item aglf">
+           
+           <td class="tg-txt">65 or older</td>
+           <td class="tg-percent">53.20%</td>
+         </tr>
+       </tbody></section>
+       </table>
+       <hr><figcaption>Data from Bureau of Justice Statistics (BJS) publication 'Medical Problems Reported By Prisoners: Survey of Prison Inmates 2016,' collected by the Prison Policy Initiative.</figcaption>
+     </div>
+ 
+     <h4><strong>An Aging Population</strong></h4>
+     <p>Where other types of sentences and terms of incarceration allow for inmates to exit prison through some means other than death, allowing the population serving under that sentence to either stay steady or decrease as sentences decline or people cycle out through parole or release, the LWOP population continues to grow with every sentence as inmates age.</p>
+     <p>Historically, life without parole sentences were reserved for chronic offenders who were typically already old at the time of their sentencing. Nellis noted a shift: in 1995 only one third of those sentenced to LWOP were under 50-years-old. In 2009, 70 percent were, changing the demographics of a population of people condemned both to age decades and eventually to die in prison.</p>
+     <p>People convicted of LWOP offenses were sentenced at 31-years-old on average, and nearly half of the current LWOP population across the country is 50-years-old or older. Sixty percent of those serving LWOP currently aged 50 or more have already served at least 20 years, and in six states including Pennsylvania and Michigan, that category ranges from 70-86 percent.</p>
+     <p>&ldquo;The documented<strong>&nbsp;&lsquo;graying of the prison population&rsquo;</strong>&nbsp;in the general prison population will be worsened by the growing segment of persons serving LWOP who will age and, by virtue of their terminal sentence, die in prison at great social and fiscal cost to society,&rdquo; Nellis warns.</p>
+     <p>Aging happens much faster in the prison environment, and medical complications caused by aging are compounded both by the typically poorer health of people entering prison and the prison environment itself. This leads to an American prison population with high rates of both chronic and communicable disease, mental health issues, and cognitive decline, the Sentencing Project reports.</p>
+     <p>According to the Bureau of Justice Statistics, 73 percent of incarcerated people 50-years-old or older have a chronic medical condition.</p>
+     <p>A 2021 New York Department of Corrections and Community Supervision report recommended that the state reduce the elderly incarceration population based on findings that the percentage of incarcerated people over age 50 had more than doubled between 2008 and 2021.</p>
+     <h4><strong>Considering Harm</strong></h4>
+     <p>Black people are overrepresented in the aging, life-sentenced prison population. While Black people make up 39 percent of incarcerated individuals, 48 percent of elderly people serving life without parole are Black. Among those Black inmates over 50 serving this kind of life-sentence, an exceptional 66 percent were under 25-years-old when sentenced to life without parole.</p>
+     <p>Nellis argued that much of the issues around LWOP might be solved by correcting misinformation, including an outsized fear of recidivism and an &ldquo;often racialized&rdquo; fear of crime.</p>
+     <p>&ldquo;Many crime experts agree that poorly crafted sentencing policies, not fluctuations in crime, have led to the unnecessary expansion of lengthy prison terms, including mandatory minimums requiring life terms,&rdquo; the report said.</p>
+     <h4><strong>Options for Elderly Prisoner Release</strong></h4>
+     <p>The report considers two avenues for releasing low-risk older people serving life without parole: geriatric release policies (or &ldquo;compassionate release&rdquo;) and executive clemency.</p>
+     <p>Compassionate release has spread further across the country since the pandemic began: in 2022, seven states introduced bills to extend some kind of early release to elderly inmates.</p>
+     <p>Compassionate release policies typically only accept individuals who are both very old and exceptionally sick. Less than half of the country has policies that specifically pay attention to elderly inmates, or geriatric release. Almost all compassionate release or medical parole policies exclude people convicted of a violent offense or sentenced to life in prison, regardless of their health status, risk assessment or age.</p>
+     <p>Of the 2022 proposed legislation on elderly release, only bills introduced in Pennsylvania and New York did not specifically disqualify those serving life sentences or convicted of homicide.</p>
+     <p>Such policies that exclude these groups &ldquo;are not compassionate in the slightest,&rdquo; the Sentencing Project argues. &ldquo;Instead, they pointedly exclude those people who would be the best candidates.&rdquo;</p>
+     <p>Clemency is another option for those with life sentences, and the Sentencing Project suggests a kind of categorical clemency once popular throughout the 20th century but largely abandoned in the 1970s.</p>
+     <h4><strong>Recommendations</strong></h4>
+     <p>The report recommends that review hearings should give added weight to advanced age, starting at 50 years old, when considering release, parole or resentencing.</p>
+     <p>Other recommendations from the Sentencing Project to address the aging LWOP population:</p>
+     <ul>
+     <li>
+     <ul>
+     <li><em>Immediate sentence reviews with a presumption of release for people over 50 years old who have served at least 10 years of their LWOP sentence;</em></li>
+     <li><em>Revise medical parole release statutes to include all incarcerated people regardless of age or crime of conviction;</em></li>
+     <li><em>Require states to disclose the cost of incarcerating the elderly, including medical care costs and future projections; and,</em></li>
+     <li><em>Reinstate parole or resentencing opportunities for those who are currently ineligible.</em></li>
+     </ul>
+     </li>
+     </ul>
+     <p>The late Mujahid Farid, founder of Release our Aging Prisoners (RAPP) spent 33 years in prison on charges of attempted murder of a New York City police officer in 1978 when he was in his late twenties. He was released at 69. The study highlights one of his reflections.</p>
+     <p>&ldquo;The closer I got to the release date, the more I looked around at the men I would be leaving behind, many of whom had, like me, been incarcerated since their teens and twenties and who were now, like me, more than 60 or 70 years of age,&rdquo; Fari wrote following his final parole board appearance.</p>
+     <p>&ldquo;Like me, they had spent their entire adult lives in prison, and most were different from the person who had first entered the system. Unlike me, they were not going home.&rdquo;</p>
+     <p><a href="https://www.sentencingproject.org/"><strong>The Sentencing Project</strong></a>&nbsp;is a Washington, D.C.-based research and advocacy center working for decarceration or to reduce the use of incarceration in the United States and to address racial disparities in the criminal justice system.</p>
+     <p>The full report can be&nbsp;<a href="https://www.sentencingproject.org/wp-content/uploads/2022/06/Nothing-But-Time-Elderly-Americans-Serving-Life-Without-Parole.pdf">accessed here.</a></p>
+   </div>
+ 
+   <!-- Your javascript should be called here -->
+   <script src="main.js"></script>
+ </body>
+ 
+ </html>

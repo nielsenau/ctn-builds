@@ -21,6 +21,7 @@ body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /** RESPONSIVE IMAGES */
 figure,
@@ -31,15 +32,168 @@ img {
     margin : 0 auto;
 }
 
+/** tables styles **/
+.tg-wrap {
+    border:#333 1px solid;
+    width:50%;
+    max-width:800px;
+    float:right;
+    padding:10px;
+    margin: 5px 10px;
+}
+
+.tg-wrap h3 {
+    padding:10px;
+    font-weight:bold;
+}
+
+caption {
+    font-style:italic;
+    font-size:10px;
+}
+
+table {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+    width:100%;
+  }
+
+.tg {
+    border-collapse:collapse;
+    border-color:#ccc;
+    border-spacing:0;
+}
+.tg td{
+   background-color:#fff;
+   border-color:#ccc;
+   border-style:solid;
+   border-width:0px;
+   color:#333;
+   font-family:Arial, sans-serif;
+   font-size:14px;
+   overflow:hidden;
+   padding:10px 5px;
+   word-break:normal;
+}
+.tg th{
+   background-color:#f0f0f0;
+   border-color:#ccc;
+   border-style:solid;
+   border-width:0px;
+   color:#333;
+   font-family:Arial, sans-serif;
+   font-size:14px;
+   font-weight:normal;
+   overflow:hidden;
+   padding:10px 5px;
+   word-break:normal;
+}
+
+th {
+    position: sticky; /* to make stick on scroll */ 
+    top: 0;
+
+}
+.tg .tg-percent{
+   text-align:right;
+   vertical-align:bottom
+}
+.tg .tg-head{
+   font-weight:bold;
+   position:-webkit-sticky;
+   position:sticky;
+   text-align:left;
+   top:-1px;
+   vertical-align:bottom;
+    will-change:transform
+}
+.tg .tg-txt{
+   text-align:left;
+   vertical-align:bottom
+}
+
+/** filter styles */ 
+
+select {
+    width: 100%;
+    border: 0px;
+    outline:0px;
+    font-style:italic;
+}
+
+.item{
+    display:none;
+    opacity: 0.65;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.item.active {
+    /** to hide all together 
+    display:block;
+    */
+    display:table-row;
+    opacity: 1;
+}
+
+/** Navigation **/
+
+.nav {
+    background-color: #FFF;
+    width:100%;
+}
+
+.nav a {
+    font-weight: 100;
+    text-transform: capitalize;
+    opacity: 0.4;
+    color: black;
+    padding-left: 10px;
+}
+
+.nav .active {
+    font-weight: bold;
+    opacity: 0.7;
+
+}
+
+.nav a:active {
+    font-weight: bolder;
+}
+
+.nav a:hover {
+    font-weight: bold;
+    color: orangered;
+    opacity: 1;
+}
+
+
+
+/** Header Styles **/
+
+h2, h3 {
+font-weight: normal;
+}
+
+h2 {
+    font-size:17px;
+}
+
 p {
     line-height: 1.2em;
+}
+
+a {
+    text-decoration: none;
+
 }
 /** Caption styles */
 .caption,
 figcaption {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color    : #8e8a8a;
     padding  : 5px 0;
+    font-style:italic;
 }
 /** BASE CLASSES */
 /** Container styles to keep content from becoming too wide or coming too close to
@@ -59,6 +213,7 @@ figcaption {
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
+    font-style: italic;
 }
 
 .desktop {
@@ -111,6 +266,16 @@ figcaption {
     .mobile {
         display: none;
     }
+
+    .collage {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .collage > div {
+        flex-basis: 30%;
+      }
+    
 }
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE

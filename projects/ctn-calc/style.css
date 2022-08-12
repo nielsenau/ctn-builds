@@ -2,126 +2,278 @@
 This is a good layout for a mobile-first CSS template.
 Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
 Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
 Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
 You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
 */
+
+
 /*********************************************************************
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
+
+
 /** SET BORDER BOX EVERYWHERE */
+
 * {
     box-sizing: border-box;
 }
+
+
 /** APPLY BASE TAG STYLES */
+
 body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
-/** RESPONSIVE IMAGES */
-figure,
-img {
-    /* Sets image width to match parent */
-    width  : 100%;
-    display: block;
-    margin : 0 auto;
+
+
+/** Navigation **/
+
+.nav {
+    background-color: #FFF;
+    width:100%;
+}
+
+.nav a {
+    font-weight: 100;
+    text-transform: capitalize;
+    opacity: 0.4;
+    color: black;
+    padding-left: 10px;
+}
+
+.nav .active {
+    font-weight: bold;
+    opacity: 0.7;
+
+}
+
+.nav a:active {
+    font-weight: bolder;
+}
+
+.nav a:hover {
+    font-weight: bold;
+    color: orangered;
+    opacity: 1;
+}
+
+
+
+/** Header Styles **/
+
+h2, h3 {
+font-weight: normal;
+}
+
+h2 {
+    font-size:17px;
 }
 
 p {
     line-height: 1.2em;
 }
+
+a {
+    text-decoration: none;
+
+}
+
+/** RESPONSIVE IMAGES */
+
+figure,
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width:800px;
+
+}
+
+p {
+    line-height: 1.2em;
+}
+
+
 /** Caption styles */
-.caption,
+
 figcaption {
     font-size: 0.9rem;
-    color    : #8e8a8a;
-    padding  : 5px 0;
+    color: #8e8a8a;
+    padding: 5px 0;
+    font-style:italic;
 }
+
+
 /** BASE CLASSES */
+
+
 /** Container styles to keep content from becoming too wide or coming too close to
 * mobile edge */
+
 .container {
-    width    : 100%;
+    width: 100%;
     max-width: 800px;
-    padding  : 10px;
-    margin   : 0 auto;
+    padding: 10px;
+    margin: 0 auto;
 }
+
+
 /** Images are allowed to be a little wider when broken out into their own container */
+
 .container.image {
     max-width: 1200px;
-    padding  : 0;
+    padding: 0;
 }
+
+
 
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
+    font-style: italic;
 }
 
-.desktop {
+/** calc styles */
+
+.calc-container {
+    background-color: #f7f7f7;
+    /* Calc background is slightly gray and the full width of the page */
+    padding: 22px 0;
+    /* 22px of vertical padding only */
+
+    flex-flow:row wrap;
+}
+
+
+.hours_container {
+    display: flex;
+    /* Make the hours_container a flex box so we can juxtapose the hours and unit */
+}
+
+.hours_container>div {
+    flex-basis: 90%;
+    /* Allow the input field in the hours container to take up 90% of the width */
+}
+
+
+/**
+* Styling the input fields to be the full width of the parent, with 7px of padding and turns off the default border 
+*/
+
+.hours_container input {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 7px;
+    border: 0;
+}
+
+
+/**
+* The unit space has a gray background and takes up the remaining 10% of space as an indicator
+* to  the user how hours works
+*/
+
+.hours_container .unit {
+    flex-basis: 10%;
+    background-color: #CCC;
+    padding: 6px;
+    text-align: center;
+}
+/** adds dollar sign injected in front of span earnings */
+
+.earnings:before {
+    content:"$";
+}
+
+
+
+/** hidden by default, revealed inline by script
+*/
+.ct,
+.nj,
+.ny,
+.ct_high,
+.nj_high,
+.ny_high {
+    margin: 5px 0;
     display: none;
 }
 
-.mobile {
-    display: block;
-}
-/** Screens are the size of at least one device screen */
-.screen {
-    width     : 100%;
-    min-height: 100vh;
-}
-/** for vertical centering */
-.screen.padd {
-    padding-top: 25%;
-}
-/** video setup */
-.video {
-    position      : relative;
-    width         : 100%;
-    height        : 0;
-    padding-bottom: calc(9 / 16 * 100%);
+.ct.active,
+.nj.active,
+.ny.active,
+.ct_high.active,
+.nj_high.active,
+.ny_high.active {
+    display:inline;
 }
 
-.video.vertical {
-    padding-bottom: calc(16 / 9 * 100%);
+
+
+/** calc headers styles */
+
+.calculator h3 {
+    margin: 10px 0px;
 }
 
-.video iframe,
-.video video {
-    position: absolute;
-    width   : 100%;
-    height  : 100%;
-    top     : 0;
-    left    : 0;
-    border  : 0;
+.calc-container h2 {
+    font-weight:bold;
+    font-size:1.5em;
 }
+
+
+/** flexbox settings top-level
+*/
+
+.calculator .row {
+    margin-bottom: 15px;
+    flex-basis: 45%;
+    flex-flow:row wrap;
+}
+
+
+
+
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
-@media(min-width: 681px) {
-    /* Any adjustments for tablets and larger go here.
-    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-    .desktop {
-        display: block;
-    }
 
-    .mobile {
-        display: none;
+@media(min-width: 681px) {
+    /* desktop flexbox */
+    .calculator {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
+
+
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
+
 @media(min-width: 769px) {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
 }
+
+
 /*********************************************************************
   YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
+
 @media(min-width: 805px) {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
@@ -129,9 +281,12 @@ figcaption {
         padding: 0;
     }
 }
+
+
 /*********************************************************************
   YOUR LARGE DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
+
 @media(min-width: 1205px) {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */

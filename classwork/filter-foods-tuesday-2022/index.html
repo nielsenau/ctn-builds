@@ -1,0 +1,110 @@
+<!-- filter exercise
+reference: ctn tuesday class 5 workshop -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <!-- set the character set -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- first step to a responsive site -->
+        <title>Foods - Filter Exercise</title>
+    
+        <!-- FONT AWESOME (updated with my kit code) -->
+        <script src="https://kit.fontawesome.com/184fd241b5.js" crossorigin="anonymous"></script>
+    
+    
+        <!-- Your styles should be called here -->
+        <link rel="stylesheet" href="style.css" />
+    
+    
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+              <![endif]-->
+    </head>
+    
+    <body>
+      <div class="container">
+        <h1>Grocery shopping</h1>
+        <p>Use the dropdown to filter the items</p>
+        <div>
+          <select class="filter">
+            <option value="item">Filter...</option>
+            <option value="fruit">Fruits</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="meat">Meat</option>
+          </select>
+        </div>
+        <section id="food">
+          <div class="item fruit active">
+            <img src="img/apples.jpg" />
+            <h3>Apples</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/bananas.jpg" />
+            <h3>Bananas</h3>
+          </div>
+  
+          <div class="item vegetable active">
+            <img src="img/carrots.jpg" />
+            <h3>Carrots</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/cherries.jpg" />
+            <h3>Cherries</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/cucumber.jpg" />
+            <h3>Cucumber</h3>
+          </div>
+  
+          <div class="item vegetable active">
+            <img src="img/onions.jpg" />
+            <h3>Onions</h3>
+          </div>
+  
+          <div class="item vegetable active">
+            <img src="img/peas.jpg" />
+            <h3>Peas</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/peppers.jpg" />
+            <h3>Peppers</h3>
+          </div>
+  
+          <div class="item meat active">
+            <img src="img/steak.jpg" />
+            <h3>Steak</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/tangerine.jpg" />
+            <h3>Tangerine</h3>
+          </div>
+  
+          <div class="item fruit vegetable active">
+            <img src="img/tomatoes.jpg" />
+            <h3>Tomatoes</h3>
+          </div>
+  
+          <div class="item fruit active">
+            <img src="img/watermelon.jpg" />
+            <h3>Watermelon</h3>
+          </div>
+        </section>
+      </div>
+  
+      <!-- Your javascript should be called here -->
+      <script src="main.js"></script>
+    </body>
+    
+    </html>
